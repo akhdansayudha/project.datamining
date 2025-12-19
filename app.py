@@ -203,3 +203,6 @@ elif menu == "🤖 Prediksi Kelulusan":
                 st.error(f"### ❌ HASIL: TIDAK LULUS (Peluang: {prob*100:.1f}%)")
     else:
         st.error("Model gagal dimuat.")
+
+st.markdown("---")
+st.caption("Dikembangkan oleh kelompok 🌲🌲🌲")
