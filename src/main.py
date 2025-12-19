@@ -1,8 +1,17 @@
+import sys
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SRC_DIR = os.path.join(BASE_DIR, "src")
+sys.path.append(SRC_DIR)
+
 from data_preparation import load_data, preprocess_data, save_processed_data
 from clustering import elbow_method, kmeans_clustering
 from classification import create_target, train_classification
 import os
-
+import streamlit as st
+st.title("Streamlit Test")
+st.success("App berhasil dijalankan 🎉")
 
 # =========================
 # PATH CONFIGURATION
@@ -10,7 +19,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-RAW_DATA_PATH = os.path.join(
+DATA_PATH = os.path.join(
     BASE_DIR,
     "data",
     "raw",
